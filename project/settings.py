@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-w#7hjaij2v_vja1old+1!mm@8-v3zzcw90!4c0k$z_c@ht*vmt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['porfolio-website-production.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -89,7 +89,7 @@ DATABASES = {
         'PORT': '',
     }
 }
-DATABASES["default"] = dj_database_url.config()
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

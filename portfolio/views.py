@@ -14,11 +14,13 @@ def contact(request):
         femail=request.POST.get('email')
         fphoneno=request.POST.get('number')
         fdesc=request.POST.get('desc')
-        query=Contact(name=fname,email=femail,phonenumber=fphoneno,description=fdesc)
-        query.save()
+        q=Contact(name=fname,email=femail,phonenumber=fphoneno,description=fdesc)
+        print(q)
+        q.save()
         messages.success(request,"Thanks for contacting us. We will get by you soon!")
         return redirect('/contact')
     return render(request,'contact.html')
+
 def handleblog(request):
     posts=Blogs.objects.all()
     context={"posts":posts}

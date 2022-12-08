@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-w#7hjaij2v_vja1old+1!mm@8-v3zzcw90!4c0k$z_c@ht*vmt"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['porfolio-website-production.up.railway.app', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['porfolio-website-production.up.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -78,12 +78,15 @@ WSGI_APPLICATION = "project.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'project',
+        'USER': 'sharath',
+        'PASSWORD': 'Sharathbhagavan15192142',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
